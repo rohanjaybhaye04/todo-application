@@ -10,11 +10,11 @@ services:
   
   mysql-db:
     image: mysql:8.0
-    environment: # Corrected from 'envirinment' to 'environment'
+    environment:
       - MYSQL_ROOT_PASSWORD=Root@123
       - MYSQL_DATABASE=tododb
     ports:
-      - "3307:3306"
+      - "3308:3306" # Port changed from 3307 to 3308
     volumes:
       - mysql-data:/var/lib/mysql
     networks:
